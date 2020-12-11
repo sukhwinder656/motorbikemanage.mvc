@@ -1,0 +1,115 @@
+﻿@model IEnumerable<motorbikemanage.mvc.Models.Staff>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date_of_Birth)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date_of_Birth)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<section class="team py-lg-4 py-md-3 py-sm-3 py-3" id="team">
+    <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+        <h3 class="title txt-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Our Crews</h3>
+        <!-- Hover Effect Style : Demo - 15 -->
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 team-grid-by">
+                <div class="box15">
+                    <img src="images/t1.jpg" alt="" class="img-fluid">
+                    <div class="box-content txt-center">
+                        <h3 class="title-team">Sam Rose</h3>
+                        <ul class="icon">
+                            <li><a href="https://www.facebook.com/"><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="https://twitter.com/login?lang=en"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="https://rss.com"><span class="fa fa-rss"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 team-grid-by">
+                <div class="box15">
+                    <img src="images/t2.jpg" alt="" class="img-fluid">
+                    <div class="box-content txt-center">
+                        <h3 class="title-team">Jacob Will</h3>
+                        <ul class="icon">
+                            <li><a href="https://www.facebook.com/"><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="https://twitter.com/login?lang=en"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="https://rss.com"><span class="fa fa-rss"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 team-grid-by">
+                <div class="box15">
+                    <img src="images/t3.jpg" alt="" class="img-fluid">
+                    <div class="box-content txt-center">
+                        <h3 class="title-team">Mia Emily</h3>
+                        <ul class="icon">
+                            <li><a href="https://www.facebook.com/"><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="https://twitter.com/login?lang=en"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="https://rss.com"><span class="fa fa-rss"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 team-grid-by">
+                <div class="box15">
+                    <img src="images/t2.jpg" alt="" class="img-fluid">
+                    <div class="box-content txt-center">
+                        <h3 class="title-team">Rob Will</h3>
+                        <ul class="icon">
+                            <li><a href="https://www.facebook.com/"><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="https://twitter.com/login?lang=en"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="https://rss.com"><span class="fa fa-rss"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//team -->

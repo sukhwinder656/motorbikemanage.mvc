@@ -1,0 +1,135 @@
+﻿@model IEnumerable<motorbikemanage.mvc.Models.Buy>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Staff)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bike)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer.CustomerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Staff.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bike.Bike_Name)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<!-->
+<section class="about" id="about">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="w3layouts-abt-info">
+                    <div class="mb-lg-4 mb-md-3 mb-3 abut-headder">
+                        <h2>Latest Offers For Popular Bikes</h2>
+                    </div>
+                    <p>Authentic heritage meets modern technology for power, style, and the unadulterated riding experience – around town or along country roads.</p>
+                </div>
+            </div>
+            <div class="col-lg-8 about-info-right">
+                <div class="about-left-w3l">
+                    <p class="pt-2">Built to shred city streets. Sleek and nimble, with an authentic urban attitude.</p>
+                    <p class="pt-1">tempor incididunt ut Lorem ipsum</p>
+                    <h5 class="mt-lg-4 mt-3">$75000</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//about -->
+<!-- service -->
+<!--Hover Effect Style : Demo - 8-->
+<section class="service py-lg-4 py-md-3 py-sm-3 py-3" id="service">
+    <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+        <h3 class="title txt-center mb-lg-5 mb-md-4 mb-sm-4 mb-3 clr">Our Features</h3>
+        <div class="row ">
+            <div class="col-lg-4 col-md-6 service-grid-by">
+                <div class="box8">
+                    <img src="images/s1.jpg" alt="" class="img-fluid">
+                    <!-- <h3 class="title-ser"><a>Service 1</h3>-->
+                    <div class="box-content txt-center">
+                        <p>Our Harley-Davidson technicians are factory trained, they have completed courses in New Zealand and abroad.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 service-grid-by">
+                <div class="box8">
+                    <img src="images/s2.jpg" alt="" class="img-fluid">
+                    <!--<h3 class="title-ser">Service 2</h3>-->
+                    <div class="box-content txt-center">
+                        <p> Crate Engine is designed to run with a wide open throttle at high engine speeds and provide instant passing power from cruising spee</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 service-grid-by">
+                <div class="service-para-w3layouts">
+                    <h4> BIKE REPAIRS</h4>
+                    <p class="mt-md-3 mt-3">Servicing your bike as per the manufacturer's schedule ensures that your motorcycle maintains its reliability, delivers peak performance, and proper fuel economy.</p>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-lg-4 mt-3 service-grid-by">
+                <div class="service-para-w3layouts">
+                    <h4> FUEL SYSTEM</h4>
+                    <p class="mt-md-3 mt-3">The fuel system diagram provides a simplified view on how fuel flows within an EFI system. The fuel tank supplies gasoline to the fuel pump. The fuel pump can be located in the fuel tank or external to the tank. The fuel pump provides a high pressure feed to the fuel rail that contains the fuel injectors. On the fuel rail there is a pressure regulator that limits the fuel pressure to 39-45 PSI and maintains a constant pressure.</p>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-lg-4 mt-3 service-grid-by">
+                <div class="box8">
+                    <img src="images/s5.jpg" alt="" class="img-fluid">
+                    <!--<h3 class="title-ser">Service 5</h3>-->
+                    <div class="box-content txt-center">
+                        <p>Made for riders seeking maximum displacement, compression and flow, it delivers 131 ft-lb of torque to the rear wheel as soon as the throttle is cranked.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-lg-4 mt-3 service-grid-by">
+                <div class="box8">
+                    <img src="images/s6.jpg" alt="" class="img-fluid">
+                    <!--<h3 class="title-ser">Service 6</h3>-->
+                    <div class="box-content txt-center">
+                        <p>sed do eiusmod tempor incididunt ut Lorem ipsum dolor</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //service -->

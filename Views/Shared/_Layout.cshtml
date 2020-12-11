@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="keywords" content="Bikie Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+         Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+    <title>@ViewData["Title"] - MotorBike_MVC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" type='text/css' media="all" />
+    <link href="//fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-navbar-dark bg-dark mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MotorBike</a>
+                <style>
+                    .navbar-brand {
+                        font-family: 'Lato', sans-serif;
+                        color: aqua;
+                        font-size: 35px;
+                        margin: 0px;
+                    }
+                </style>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Bikes" asp-action="Index">Bikes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Buys" asp-action="Index">Buys</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Customers" asp-action="Index">Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Staffs" asp-action="Index">Staffs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <footer class="py-lg-5 py-md-4 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 footer-bottom">
+                    <h4>Branch-1</h4>
+                    <div class="footer-top mt-2">
+                        <p> North Auckland Harley-David</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 footer-bottom">
+                    <h4>Branch-2</h4>
+                    <div class="footer-top mt-2">
+                        <p>East Coast Harley-Davidson</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 footer-bottom">
+                    <h4> Contact Us</h4>
+                    <div class="footer-top mt-3">
+                        <p><span>Address</span> :381 Te Rapa Road, Te Rapa, Hamilton 3200.</p>
+                        <p class="pt-2"> <span> Phone</span> :+(64) 07-958 1400</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 footer-bottom">
+                    <h4> Service</h4>
+                    <div class="footer-top mt-md-3 mt-3">
+                        <p class="pb-2">Engine Rebuild and Upgrade</p>
+                        <p class="pb-2">Race and Performance </p>
+                        <p class="pb-2">Dyno Performance Centre</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-bottom-txt txt-center py-3">
+                <p>
+                    © 2020 Motorbike . All Rights Reserved |
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

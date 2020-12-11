@@ -1,0 +1,98 @@
+﻿@model IEnumerable<motorbikemanage.mvc.Models.Customer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phonenumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phonenumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<section class="clients py-lg-4 py-md-3 py-sm-3 py-3" id="clients">
+    <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+        <h3 class="title txt-center mb-lg-5 mb-md-4 mb-sm-4 mb-3 clr">Our happy Customers</h3>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 clients-txt">
+                <div class="client-txt-color">
+                    <img src="images/c1.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="client-txt-w3ls mt-lg-4 mt-3">
+                    <h4>Jacob</h4>
+                    <p class="mt-sm-3 mt-2">Best thing I’ve done in a very long time. Graduated Riding Academy last year and bought a bike (2020 Sport Glide) </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 clients-txt">
+                <div class="client-txt-w3ls ">
+                    <h4>Elijah</h4>
+                    <p class="mt-sm-3 mt-2">I love my Harley, It's was pricey in all areas but they all are. I like the sound, the ride and the way they looked. If you take care them they will give you years of what freedom is all about on the road. </p>
+                </div>
+                <div class="client-txt-color mt-lg-4 mt-3">
+                    <img src="images/c2.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 clients-txt">
+                <div class="client-txt-color">
+                    <img src="images/c3.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="client-txt-w3ls mt-lg-4 mt-3">
+                    <h4>Ethan</h4>
+                    <p class="mt-sm-3 mt-2">Love the ride and quality. The stability on curves, lots of optional equipment and storage for travel, or just groceries room for two riders with comfort. </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 clients-txt">
+                <div class="client-txt-w3ls">
+                    <h4>Noah</h4>
+                    <p class="mt-sm-3 mt-2">It’s the hog And it rides like a hog. Smooth, hard and long.. The trim work could be a little better, price so so and you know it is what it is. </p>
+                </div>
+                <div class="client-txt-color mt-lg-4 mt-3">
+                    <img src="images/c4.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//clients -->
